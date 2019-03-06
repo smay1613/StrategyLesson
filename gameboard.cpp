@@ -69,5 +69,6 @@ void GameBoard::removePiece(const BoardCellPosition cellPosition)
 void GameBoard::placePiece(std::unique_ptr<ChessPiece> piece, BoardCellPosition toPosition)
 {
     const CellIterator& cell = at(toPosition);
+    piece->setPosition(toPosition);
     cell->reset(piece.release());
 }

@@ -24,11 +24,11 @@ std::vector<BoardCellPosition> PawnMoveStrategy::getAvailableMoves(const ChessPi
     // attack, must be with opposite side piece
     for (int offset : sideOffsets) {
         if (isValidPosition(nextRowPosition, currentPosition.column + offset)) {
-            const BoardCellPosition leftAttackPosition {nextRowPosition,
+            const BoardCellPosition attackPosition {nextRowPosition,
                                                         currentPosition.column + offset};
-            if (const auto& attackedPiece = *board.get(leftAttackPosition)) {
+            if (const auto& attackedPiece = *board.get(attackPosition)) {
                 if (attackedPiece->side() != piece.side()) {
-                    result.push_back(leftAttackPosition);
+                    result.push_back(attackPosition);
                 }
             }
         }

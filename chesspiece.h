@@ -7,7 +7,7 @@
 class ChessPiece final
 {
 public:
-    ChessPiece(Side side = Side::Invalid, BoardCellPosition position = {-1u, -1u});
+    ChessPiece(Side side, BoardCellPosition position);
 
     void setMoveStrategy(std::unique_ptr<IMoveStrategy> moveStrategy);
     bool move(BoardCellPosition toPosition);

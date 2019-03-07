@@ -1,0 +1,8 @@
+excplicit constructor
+SOLID
+Singleton, Builder Patterns
+Dependency Injection, Inversion of control
+Dependency injection vs Strategy pattern
+Types overflow (why size_t can be - 1?)
+Replace subclass with type field refactoring.
+Const correctness

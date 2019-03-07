@@ -1,0 +1,5 @@
+1. Imagine Warrior class from Factory lesson (https://github.com/smay1613/StrategyLesson) can be upgraded to the next generation (like level up in our game). 
+Depending on genegration of warrior, he can do a different battle cry. 
+Add a GenerationOne*,  GenerationTwo*, GenerationThree* classes,  derived from AttackStrategy. 
+Player class should set the appropriate strategy to warrior object.  
+Appropriate Strategy should be created via Simple Factory.  

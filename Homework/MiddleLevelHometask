@@ -1,0 +1,4 @@
+2. Write tests for chess application (optionally). 
+Add a rook move strategy. Rook strategy should be implemented with find_if algorithm usage (only for columns searching!). See MLExplanation.png.
+Appropriate strategy should be created via Factory.
+Make a pull request to this repo with changes. 

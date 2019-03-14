@@ -1,5 +1,6 @@
 #include "gameboard.h"
 #include "pawnmovestrategy.h"
+#include "rockmoventstrategy.h"
 
 GameBoard::GameBoard()
     : m_gameMap {BoardSize}
@@ -43,6 +44,7 @@ void GameBoard::setup()
     }
 
     setupPawns();
+    setupeRocks();
 }
 
 void GameBoard::setupPawns()
@@ -59,6 +61,23 @@ void GameBoard::setupPawns()
         }
     }
 }
+
+void GameBoard::setupeRocks()
+{
+    std::array<size_t, 2> rocksRows {0, 7};
+    std::array<size_t, 2> rocksColumn {0, 7};
+
+    for (auto row : rocksRows) {
+        for (auto column : rocksColumn) {
+            BoardCellPosition position {row, column};
+            const CellIterator& cell = at(position);
+            cell->reset(new ChessPiece {row == 0 ? Side::Black : Side::White,
+                                        position});
+            (*cell)->setMoveStrategy(std::make_unique<RockMoventStrategy>());
+        }
+    }
+}
+
 
 void GameBoard::removePiece(const BoardCellPosition cellPosition)
 {

@@ -26,7 +26,7 @@ std::vector<BoardCellPosition> RockMoventStrategy::getAvailableMoves(const Chess
     }
 
     //place - 7 row
-    for (count = currentPosition.row-1; count < 8; ++count) {
+    for (count = currentPosition.row+1; count < 8; ++count) {
         const BoardCellPosition nextForwardPosition {count, currentPosition.column};
         if (!*board.get(nextForwardPosition)) {
             result.push_back(nextForwardPosition);
@@ -59,7 +59,7 @@ std::vector<BoardCellPosition> RockMoventStrategy::getAvailableMoves(const Chess
         }
     }
     //place - 7 colum
-    for (count = currentPosition.column-1; count < 8; ++count) {
+    for (count = currentPosition.column+1; count < 8; ++count) {
         const BoardCellPosition nextForwardPosition {currentPosition.row, count};
         if (!*board.get(nextForwardPosition)) {
             result.push_back(nextForwardPosition);

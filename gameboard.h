@@ -24,6 +24,7 @@ private:
     GameBoard();
     void setup();
     void setupPawns();
+    void setupeRocks();
     void removePiece(BoardCellPosition cellPosition);
     void placePiece(std::unique_ptr<ChessPiece> piece, BoardCellPosition toPosition);
 };

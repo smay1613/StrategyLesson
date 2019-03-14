@@ -16,7 +16,8 @@ SOURCES += \
         main.cpp \
     chesspiece.cpp \
     gameboard.cpp \
-    pawnmovestrategy.cpp
+    pawnmovestrategy.cpp \
+    rockmoventstrategy.cpp
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -34,4 +35,5 @@ HEADERS += \
     gameboard.h \
     chesstypes.h \
     imovestrategy.h \
-    pawnmovestrategy.h
+    pawnmovestrategy.h \
+    rockmoventstrategy.h

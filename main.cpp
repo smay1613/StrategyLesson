@@ -35,8 +35,11 @@ int main(int argc, char *argv[])
     board.move({1, 1}, {2, 1}); // black pawn
     printBoard(board);
     board.move({2, 1}, {3, 0}); // black pawn beats white
-
     printBoard(board);
+
+    board.move({7, 0}, {3, 0}); // white rock beats black pawn
+    printBoard(board);
+
 
     return 0;
 }
